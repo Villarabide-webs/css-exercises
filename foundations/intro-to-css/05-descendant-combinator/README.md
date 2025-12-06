@@ -1,18 +1,45 @@
-# Descendant Combinator
-Understanding how combinators work can become a lot easier when you start playing around with them and see what exactly is affected by them versus what isn't.
+Ejercicio 05 — Combinador Descendiente (Descendant Combinator)
 
-The goal of this exercise is to apply styles to elements that are descendants of another element, while leaving elements that *aren't* descendants of that element unstyled.
+Este ejercicio forma parte de los Fundamentos de CSS y tiene como objetivo entender cómo funcionan los combinadores descendientes, una herramienta clave para aplicar estilos solo a elementos que están dentro de otros elementos.
 
-You can use either type or class selectors for this exercise; use whichever you may feel you want to practice with more. The HTML file is set up (so no need to edit anything in it) such that any combination of selectors will work, so if you're feeling adventurous you can even try combining a type *and* class selector for the descendant combinator.
+El HTML proporcionado ya está completamente preparado, por lo que no es necesario modificarlo. Tu trabajo consiste únicamente en escribir reglas CSS que afecten solo a ciertos elementos, según su relación en el árbol DOM.
 
-The properties you need to add are:
+⸻
 
-* Only the `p` elements that are descendants of the `div` element should have a yellow background, red text, a font size of 20px, and center aligned.
+🎯 Objetivo del ejercicio
 
-## Desired Outcome
-![desired outcome](./desired-outcome.png)
+Aplicar estilos únicamente a los elementos <p> que son descendientes de un <div>, sin afectar a los <p> que no estén dentro de un <div>.
 
+⸻
 
-### Self Check
-- Do the elements that contain the text "This should be styled" have the correct styles applied?
-- Do the elements that contain the text "This should be unstyled" have no styles applied?
+🧩 Estilos requeridos
+
+Los <p> dentro del <div> deben tener:
+	•	Fondo: amarillo
+	•	Texto: rojo
+	•	Tamaño de fuente: 20px
+	•	Alineación: centrada
+
+Los <p> que NO son descendientes del <div>:
+	•	❌ No deben recibir ningún estilo
+
+⸻
+
+🧠 Solución implementada (CSS)
+div p {
+  background-color: yellow;
+  color: red;
+  font-size: 20px;
+  text-align: center;
+}
+Explicación técnica
+
+El selector:
+div p
+es un combinador descendiente, lo que significa:
+
+“Selecciona todos los <p> que estén dentro de un <div>, sin importar el nivel de profundidad.”
+
+De esta forma:
+	•	Los <p> dentro del <div> reciben los estilos.
+	•	Los <p> fuera del <div> se mantienen completamente sin cambios.
