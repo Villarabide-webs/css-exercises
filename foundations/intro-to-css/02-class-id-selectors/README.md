@@ -1,25 +1,74 @@
-# Class and ID Selectors
-Knowing how to add class and ID attributes to HTML elements, as well as use their respective selectors, is invaluable. It's important to practice using them.
+Ejercicio 02: Selectores de Clases e IDs
 
-There are several elements in the HTML file provided, which you will have to add either class or ID attributes to, as noted in the outcome image below. You will then have to add rules in the CSS file provided using the correct selector syntax. Look over the outcome image carefully, and try to keep in mind which elements look similarly styled (classes), which ones may be completely unique from the rest (ID), and which ones have slight variations from others (multiple classes).
+🎯 Descripción del ejercicio
 
-It isn't entirely important which class or ID values you use, as the focus here is on being able to add the attributes and use the correct selector syntax to style elements. For the colors in this exercise, try using a non-keyword value (RGB, HEX, or HSL). The properties you need to add to each element are:
+En este ejercicio se pedía practicar el uso de los selectores class e id en HTML y CSS, identificando correctamente cuándo usar cada uno.
 
-* **All odd numbered elements**: a light red/pink background, and a list of fonts containing `Verdana` and `DejaVu Sans` with `sans-serif` as a fallback
-* **The second element**: blue text and a font size of 36px
-* **The third element**: in addition to the styles for all odd numbered elements, add a font size of 24px
-* **The fourth element**: a light green background, a font size of 24px, and bold
+El objetivo principal era:
+	•	Agrupar elementos con estilos similares mediante clases
+	•	Asignar estilos exclusivos a elementos únicos usando IDs
+	•	Aplicar varias clases a un mismo elemento cuando necesitaba estilos combinados
+	•	Utilizar colores en formatos RGB, HEX o HSL, evitando palabras clave
 
-Quick tip: in VS Code, you can change which format colors are displayed in RGB, HEX, or HSL by hovering over the color value in the CSS and clicking the top of the popup that appears!
+⸻
 
-> ### Note:
-> Part of your task is to add a font to _some_ of these items. Your browser's font's might be different than the one displayed in the desired outcome image. As long as you confirm that the fonts _are_ being applied to the right lines any differences are okay for this exercise.
+🛠️ Solución aplicada
 
-## Desired Outcome
-![desired outcome](./desired-outcome.png)
+✔ 1. Clase .odd para los elementos impares
+
+Se creó la clase odd para los elementos 1, 3 y 5, ya que compartían los mismos estilos:
+	•	Fondo rosa claro
+	•	Fuentes: "Verdana", "DejaVu Sans", sans-serif
+
+Se añadió así:
+<p class="odd">...</p>
+Y en CSS:
+.odd {
+  background-color: #ffd6dc;
+  font-family: "Verdana", "DejaVu Sans", sans-serif;
+}
+ 2. ID #second para el elemento 2 (estilo único)
+
+El segundo elemento tiene un estilo exclusivo, así que se usó un ID:
+	•	Texto azul (RGB)
+	•	Tamaño 36px
+    <div id="second">...</div>
+    #second {
+  color: rgb(0, 102, 204);
+  font-size: 36px;
+}
+3. Clase extra .large para el elemento 3
+
+El elemento 3 debía tener los estilos de los impares más un tamaño de letra mayor (24px).
+Por eso se aplicaron dos clases:
+<p class="odd large">...</p>
+
+css
+.large {
+  font-size: 24px;
+}
+
+4. ID #fourth para el elemento 4 (otro estilo único)
+	•	Fondo verde claro (HSL)
+	•	Tamaño 24px
+	•	Negrita 
+    html
+    <div id="fourth">...</div>
+
+css 
+#fourth {
+  background-color: hsl(120, 60%, 90%);
+  font-size: 24px;
+  font-weight: bold;
+}
 
 
-### Self Check
-- Do the odd numbered `p` elements share a class?
-- Do the even numbered `div` elements have unique IDs?
-- Does the Number 3 element have multiple classes?
+
+
+
+
+
+
+
+Class para varios elementos con el mismo estilo
+id para un unico elemento solo puedo aver un id="x" por pagina
