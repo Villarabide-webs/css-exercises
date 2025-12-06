@@ -7,21 +7,44 @@ body {
   width: 400px;
   background: #fff;
   margin: 16px auto;
+  padding: 8px; /* Añadido: espacio interno general */
+  border: 1px solid #ccc; /* Añadido: borde suave igual a desired outcome */
+  border-radius: 4px;     /* Añadido: esquinas más suaves */
 }
 
 .title {
   background: #e3f4ff;
+  padding: 12px;      /* Añadido: espacio parecido al ejemplo */
+  font-size: 18px;    /* Título un poco más grande */
+  font-weight: bold;  /* Hace que se parezca al example */
+  margin-bottom: 8px; /* Espacio con el siguiente bloque */
 }
 
 .content {
   background: #e3f4ff;
+  padding: 12px;      /* Añadido: igual que el título */
+  margin-bottom: 8px; /* Espaciado entre bloques */
+  line-height: 1.4;   /* Hace que el texto se vea igual de cómodo */
 }
 
 .button-container {
   background: #e3f4ff;
+  text-align: center;
+  padding: 16px;
+  display: flex;
+  flex-direction: column; /* << Pone el texto arriba y el botón debajo */
+  gap: 6px;             /* << Espacio entre texto y botón */
+  align-items: center;
 }
+
+
 
 button {
   background: white;
-  border: 1px solid #eee;
+  border: 1px solid #ccc; /* un borde un poco más visible */
+  padding: 8px 16px;      /* padding del botón */
+  border-radius: 4px;     /* estilo moderno */
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
 }
