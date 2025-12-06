@@ -1,19 +1,48 @@
-# Grouping Selectors
+Objetivo del ejercicio
 
-Let's build a little off the previous exercise. Here, you're going to give two elements each a unique class name, then add rules for styles that both elements share as well as their own unique styles. Make sure you take a good look at the outcome image below to see exactly what is unique about each element, and what both elements have in common.
+Aplicar estilos a dos elementos usando:
+	•	✔ Clases únicas para cada elemento
+	•	✔ Selector agrupado para estilos comunes
+	•	✔ Selectores individuales para estilos exclusivos
 
-This will help you further practice adding classes and using class selectors, so be sure you add the class attribute in the HTML file. For the remainder of these exercises, the format of any colors is entirely up to you; we trust you'll practice using the different values! The properties you need to add to each element are:
+Los estilos requeridos eran:
 
-- **The first element**: a black background and white text
-- **The second element**: a yellow background
-- **Both elements**: a font size of 28px and a list of fonts containing `Helvetica` and `Times New Roman`, with `sans-serif` as a fallback
+🔹 Estilos comunes (para ambos elementos)
+	•	Tamaño de fuente: 28px
+	•	Lista de fuentes: Helvetica, Times New Roman, sans-serif
 
-## Desired Outcome
+🔹 Estilos únicos
+	•	Primer elemento (.caja1)
+	•	Fondo negro
+	•	Texto blanco
+	•	Segundo elemento (.caja2)
+	•	Fondo amarillo
+	•	Texto negro
 
-![desired outcome](./desired-outcome.png)
+⸻
 
-### Self Check
+🧩 Estructura del ejercicio
 
-- Does each element have a unique class name?
-- Did you use the grouping selector for styles that both elements share?
-- Did you make separate rules for the styles unique to each element?
+HTML
+
+Se añadieron dos botones, cada uno con su clase:
+<button class="caja1">Click Me!</button>
+<button class="caja2">No, Click Me!</button>
+CSS
+
+Se utilizó un selector agrupado para los estilos comunes y reglas individuales para los estilos específicos:
+.caja1,
+.caja2 {
+  font-size: 28px;
+  font-family: "Helvetica", "Times New Roman", sans-serif;
+}
+
+.caja1 {
+  background-color: black;
+  color: white;
+}
+
+.caja2 {
+  background-color: yellow;
+  color: black;
+}
